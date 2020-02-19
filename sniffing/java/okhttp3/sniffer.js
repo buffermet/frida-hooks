@@ -9,16 +9,16 @@ Java.perform(function(){
     yellow   = "\x1b[33m",
     reset    = "\x1b[0m";
 
-  function log(a) {
+  function logRaw(a) {
     console.log(a);
   }
 
-  function log_err(a) {
+  function logError(a) {
     console.error(a);
   }
 
   function reflect(a) {
-    log(Object.getOwnPropertyNames(a.__proto__));
+    logRaw(Object.getOwnPropertyNames(a.__proto__));
   }
 
   try {
@@ -38,7 +38,7 @@ Java.perform(function(){
             reqBody    = req.body.call(req),
             resBody    = res.body.call(res);
 
-          log(
+          logRaw(
             blue +
               method + " " + url + "\n" +
               reqHeaders + "\n" +
@@ -51,12 +51,12 @@ Java.perform(function(){
               "---");
         }
       } catch(e) {
-        console.error(e);
+        logError(e);
       }
 
       return res;
     }
   } catch(e) {
-    console.error(e);
+    logError(e);
   }
 });
