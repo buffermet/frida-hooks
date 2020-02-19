@@ -22,6 +22,7 @@ Java.perform(function(){
       "propnames {\n" + 
         "  " + Object
           .getOwnPropertyNames(a.__proto__)
+          .toString()
           .replace(/,/g, ",\n  ") + "\n" +
       "}\n" +
       "keys {\n" +
