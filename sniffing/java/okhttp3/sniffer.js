@@ -23,7 +23,7 @@ Java.perform(function(){
         "  " + Object
           .getOwnPropertyNames(a.__proto__)
           .replace(/,/g, ",\n  ") + "\n" +
-      "}\n"
+      "}\n" +
       "keys {\n" +
         "  " + Object.keys(a) + "\n" +
       "}");
