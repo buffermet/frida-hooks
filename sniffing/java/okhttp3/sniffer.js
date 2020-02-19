@@ -18,7 +18,13 @@ Java.perform(function(){
   }
 
   function reflect(a) {
-    logRaw(Object.getOwnPropertyNames(a.__proto__));
+    logRaw(
+      "propnames {\n" + 
+        "  " + Object.getOwnPropertyNames(a.__proto__).replace(/,/g, ",\n  ") + "\n" +
+      "}\n"
+      "keys {\n" +
+        "  " + Object.keys(a) + "\n" +
+      "}");
   }
 
   try {
