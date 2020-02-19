@@ -26,7 +26,10 @@ Java.perform(function(){
           .replace(/,/g, ",\n  ") + "\n" +
       "}\n" +
       "keys {\n" +
-        "  " + Object.keys(a) + "\n" +
+        "  " + Object
+          .keys(a)
+          .toString()
+          .replace(/,/g, ",\n  ") + "\n" +
       "}");
   }
 
