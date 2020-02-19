@@ -20,7 +20,9 @@ Java.perform(function(){
   function reflect(a) {
     logRaw(
       "propnames {\n" + 
-        "  " + Object.getOwnPropertyNames(a.__proto__).replace(/,/g, ",\n  ") + "\n" +
+        "  " + Object
+          .getOwnPropertyNames(a.__proto__)
+          .replace(/,/g, ",\n  ") + "\n" +
       "}\n"
       "keys {\n" +
         "  " + Object.keys(a) + "\n" +
